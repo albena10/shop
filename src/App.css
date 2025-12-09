@@ -1,38 +1,112 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.clothes {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 42px;
   text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 28px;
+  margin: 30px 0 15px;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clothes-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- Product Card --- */
+.product {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Title */
+.h2-1 {
+  font-size: 20px;
+  margin: 18px 0 8px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Price */
+.p1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2a7bff;
+}
+
+/* Description */
+.p {
+  font-size: 14px;
+  color: #444;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+/* Category */
+.p2 {
+  font-size: 13px;
+  background: #eee;
+  color: #555;
+  padding: 6px 10px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* --- Filters --- */
+input[type="text"],
+select {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+select {
+  cursor: pointer;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #2a7bff;
+  box-shadow: 0 0 3px rgba(42, 123, 255, 0.4);
 }
