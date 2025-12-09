@@ -75,10 +75,10 @@ const App = () => {
                                 {filteredProducts.map((p) => (
                                     <div className="product" key={p.id}>
                                         <img src={p.images[0]} alt={p.title} width="350" />
-                                        <h2 className="h2-1">{p.title}</h2>
-                                        <p className="p1">${p.price}</p>
-                                        <p className="p">{p.description}</p>
-                                        <p className="p2">{p.category}</p>
+                                        <h2 className="title">{p.title}</h2>
+                                        <p className="price">${p.price}</p>
+                                        <p className="descpription">{p.description}</p>
+                                        <p className="category">{p.category}</p>
                                     </div>
                                 ))}
                             </div>
